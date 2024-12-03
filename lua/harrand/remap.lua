@@ -17,7 +17,7 @@ end)
 local harpoon_mark = require("harpoon.mark")
 local harpoon_ui = require("harpoon.ui")
 -- track a new file in harpoon
-vim.keymap.set("n", "<leader>a", harpoon_mark.add_file) 
+vim.keymap.set("n", "<leader>e", harpoon_mark.add_file) 
 -- open harpoon gui
 vim.keymap.set("n", "<leader>q", harpoon_ui.toggle_quick_menu) 
 -- remove everything in harpoon
