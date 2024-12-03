@@ -12,4 +12,14 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use("theprimeagen/harpoon")
 
+	use {
+		"VonHeikemen/lsp-zero.nvim",
+		requires =
+		{
+			{'neovim/nvim-lspconfig'},
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+		}
+	}
+
 end)
