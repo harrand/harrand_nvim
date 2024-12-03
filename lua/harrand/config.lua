@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 4
 
 vim.opt.wrap = false
 
