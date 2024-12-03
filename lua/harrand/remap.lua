@@ -17,11 +17,13 @@ end)
 local harpoon_mark = require("harpoon.mark")
 local harpoon_ui = require("harpoon.ui")
 -- track a new file in harpoon
-vim.keymap.set("n", "<leader>e", harpoon_mark.add_file) 
+vim.keymap.set("n", "<leader>z", harpoon_mark.add_file) 
+-- remove tracked file
+vim.keymap.set("n", "<leader>x", harpoon_mark.rm_file) 
 -- open harpoon gui
 vim.keymap.set("n", "<leader>q", harpoon_ui.toggle_quick_menu) 
 -- remove everything in harpoon
-vim.keymap.set("n", "<leader>x", harpoon_mark.clear_all) 
+vim.keymap.set("n", "<leader>c", harpoon_mark.clear_all) 
 
 -- split current buffer and open a terminal at its parent directory
 vim.keymap.set("n", "<leader>t", function()
