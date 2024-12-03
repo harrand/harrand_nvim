@@ -8,3 +8,10 @@ vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Telescope find fi
 vim.keymap.set("n", "<leader>fw", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
+
+local harpoon_mark = require("harpoon.mark")
+local harpoon_ui = require("harpoon.ui")
+vim.keymap.set("n", "<leader>a", harpoon_mark.add_file) 
+vim.keymap.set("n", "<leader>q", harpoon_ui.toggle_quick_menu) 
+vim.keymap.set("n", "<leader>x", harpoon_mark.clear_all) 
+
