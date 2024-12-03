@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 -- Open the directory of the current file in netrw
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("t", "<leader><ESC>", "<C-\\><C-n>")
 
 -- fuzzy finding
 local builtin = require('telescope.builtin')
