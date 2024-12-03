@@ -15,3 +15,6 @@ vim.keymap.set("n", "<leader>a", harpoon_mark.add_file)
 vim.keymap.set("n", "<leader>q", harpoon_ui.toggle_quick_menu) 
 vim.keymap.set("n", "<leader>x", harpoon_mark.clear_all) 
 
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("split | terminal")
+end)
