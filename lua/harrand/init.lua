@@ -1,9 +1,5 @@
-require("harrand.config")
-require("harrand.remap")
-
-local packpath = vim.o.packpath
-local first_path = packpath:match("([^,]+)")  -- This matches everything before the first comma
-print(first_path)
+local first_path = vim.fn.stdpath("config")
+print("first path: " .. first_path)
 
 local on_first_install = function()
 	-- this code is ran once ever.
@@ -16,10 +12,10 @@ local on_first_install = function()
 	local job = vim.fn.jobstart(
 		"git clone https://github.com/wbthomason/packer.nvim",
 		{
-			cwd = first_path,
-			on_exit = function() print("Finished fetching packer") end
+			cwd = first_path
 		}
 	)
+	vim.fn.jobwait({job})
 end
 
 -- First time install
@@ -31,3 +27,7 @@ else
 	-- first time
 	on_first_install()
 end
+
+require("harrand.config")
+require("harrand.remap")
+require("harrand.packer")
