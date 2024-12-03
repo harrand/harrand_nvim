@@ -29,7 +29,7 @@ end)
 
 -- ctrl-w + hjkl is the default bind to move between splits
 -- i prefer leader
-vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Move to left split" })
-vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Move to below split" })
-vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Move to above split" })
-vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move to right split" })
+vim.keymap.set("n", "<leader>a", "<C-w>h", { desc = "Move to left split" })
+vim.keymap.set("n", "<leader>s", "<C-w>j", { desc = "Move to below split" })
+vim.keymap.set("n", "<leader>w", "<C-w>k", { desc = "Move to above split" })
+vim.keymap.set("n", "<leader>d", "<C-w>l", { desc = "Move to right split" })
