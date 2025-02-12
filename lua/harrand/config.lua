@@ -24,3 +24,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+
+-- .psy files should be treated as zig (closest)
+vim.api.nvim_create_autocmd("BufRead", {
+	pattern = "*.psy",
+	callback = function()
+		vim.cmd("set syntax=zig");
+	end
+})
